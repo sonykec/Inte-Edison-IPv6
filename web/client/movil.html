@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!--Indica la version de HTML que se usa. En este caso es HTML5 -->
+<html lang="es"> 
+<meta charset="utf-8"> <!--Para poder visualizar correctamente las “ñ” y tildes -->
+
+<html>
+<head>
+	<title>Visualizar Video</title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.5">
+	<link rel="stylesheet" media="screen" type="text/css" href="style/style3.css" /> <!--Aqui accedemos a la hoja de estilos se creo para esta seccion -->
+  
+</head>
+
+<body>
+	<div id="BODY2">
+            <a  href="index.html">
+			<img src="regreso.png" width=80 height=80 vspace=20 hspace=30 align="left"/>
+			<img src="logo.png" width=75 height=75 vspace=20 hspace=30 align="right">
+            </a>
+            	<h1>DISPOSITIVO MOVIL</h1>
+       
+      		<canvas id="canvas-video" width="640" height="480"></canvas>
+	
+		<script src="/jsmpg.js"></script>
+		<script type="text/javascript">
+    
+    		var canvas = document.getElementById('canvas-video'); <!--Se crea una variable para acceder al video y visualizarlo en la pagina web -->
+   		var ctx = canvas.getContext('2d'); <!--El video que se captura se pasa a un contexto de 2d que se una en canvas -->
+   		 ctx.fillStyle = '#333';
+   		 ctx.fillText('Cargando...', canvas.width/2-30, canvas.height/3); <!--Se configura el tamano de la ventana donde se podra observar el video -->
+
+		
+      		var client = new WebSocket('ws://192.168.5.12:8084'); <!--Se especifica la direccion websocket de origen -->
+		var client1 = new WebSocket('ws://[2800:370:88:48b0:9e4e:36ff:fe62:2b8c]:8084'); <!--Se especifica la direccion websocket de origen -->
+
+		var player = new jsmpeg(client, { canvas:canvas }); <!--Se envia la informacion websocket al destino -->
+		var player1 = new jsmpeg(client1, { canvas:canvas }); <!--Se envia la informacion websocket al destino -->
+		</script>
+	</div>
+		<div align="center"> <img align="center" src="buho.gif" width=360 height=332.4 vspace=50></div>
+</body>
+</html>
