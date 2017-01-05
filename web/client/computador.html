@@ -28,8 +28,8 @@
    		 ctx.fillStyle = '#333';
    		 ctx.fillText('Cargando...', canvas.width/2-30, canvas.height/3); <!--Se configura el tamano de la ventana donde se podra observar el video -->
 
-      		var client = new WebSocket('ws://192.168.5.12:8084'); <!--Se especifica la direccion websocket de origen -->
-		var client1 = new WebSocket('ws://[2800:370:88:48b0:9e4e:36ff:fe62:2b8c]:8084'); <!--Se especifica la direccion websocket de origen -->
+      		var client = new WebSocket('ws://192.168.5.11:8084'); <!--Se especifica la direccion websocket de origen -->
+		var client1 = new WebSocket('ws://[2000:1::7a4b:87ff:fea2:7d93]:8084'); <!--Se especifica la direccion websocket de origen -->
 
 		var player = new jsmpeg(client, { canvas:canvas }); <!--Se envia la informacion websocket al destino -->
 		var player1 = new jsmpeg(client1, { canvas:canvas }); <!--Se envia la informacion websocket al destino -->
