@@ -1,0 +1,23 @@
+body {background-color:#f0fcfb;}	
+
+div#BODY2 {
+	width:auto;
+	margin-left:auto;
+	margin-right:auto;
+	border:1px inset #07fbe7;
+	}	
+h1 {
+	color:#03897e;
+	text-align:center;
+	margin-top:50px;
+	}
+		
+#canvas-video {
+	width: 640px;
+	height: 480px;
+	border: 1px solid #ccc;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:30px;
+	display: block
+       	}
