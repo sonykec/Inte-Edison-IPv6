@@ -24,11 +24,11 @@
 		<script type="text/javascript">
     
     		var canvas = document.getElementById('canvas-video'); <!--Se crea una variable para acceder al video y visualizarlo en la pagina web -->
-   		var ctx = canvas.getContext('2d'); <!--El video que se captura se pasa a un contexto de 2d que se una en canvas -->
+   		var ctx = canvas.getContext('2d'); <!--El video que se captura se pasa a un contexto de canvas -->
    		 ctx.fillStyle = '#333';
    		 ctx.fillText('Cargando...', canvas.width/2-30, canvas.height/3); <!--Se configura el tamano de la ventana donde se podra observar el video -->
 
-      		var client = new WebSocket('ws://192.168.5.11:8084'); <!--Se especifica la direccion websocket de origen -->
+      		var client = new WebSocket('ws://192.168.5.12:8084'); <!--Se especifica la direccion websocket de origen -->
 		var client1 = new WebSocket('ws://[2000:1::7a4b:87ff:fea2:7d93]:8084'); <!--Se especifica la direccion websocket de origen -->
 
 		var player = new jsmpeg(client, { canvas:canvas }); <!--Se envia la informacion websocket al destino -->
