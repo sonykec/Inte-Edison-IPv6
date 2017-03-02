@@ -39,8 +39,8 @@ http.createServer(app).listen(app.get('port'), function () {
 //https://github.com/phoboslab/jsmpeg/blob/master/stream-server.js
 
 var STREAM_MAGIC_BYTES = 'jsmp';
-var width = 320;
-var height = 240;
+var width = 640;
+var height = 480;
 //Variables de ancho y largo que se utilizara para el video
 
 
